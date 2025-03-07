@@ -88,7 +88,7 @@ export default function ThreeScene() {
     galaxyMaterial.vertexColors = true;
     galaxyMaterial.alphaMap = getRandomAlphaMap();
 
-    const galaxyVertices = [];
+     const galaxyVertices = [];
     const galaxyColors = [];
     const colorPalette = [
       new THREE.Color(0x4f46e5), // Indigo
