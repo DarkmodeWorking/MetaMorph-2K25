@@ -1,15 +1,49 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ChevronDown } from 'lucide-react';
-import React, { useRef, useState } from 'react'
-
+import React, { useEffect, useRef, useState } from 'react'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ThreeScene from './three-scene';
+// Register GSAP plugins
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+  }
 const Hero = () => {
     const introRef = useRef<HTMLDivElement>(null);
     const sectionsRef = useRef<HTMLDivElement>(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const { scrollYProgress } = useScroll();
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+    useEffect(() => {
+        // Set loaded state
+        setIsLoaded(true);
+    
+        // Intro text animation
+        if (introRef.current) {
+          gsap.from(introRef.current.querySelectorAll(".animate-text"), {
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            duration: 1,
+            ease: "power3.out",
+          });
+        }
+    
+        // Add scroll listener to detect direction
+        let lastScrollTop = 0;
+        const handleScroll = () => {
+          const st = window.scrollY || document.documentElement.scrollTop;
+          lastScrollTop = st <= 0 ? 0 : st;
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
   return (
     <>
+    <div>
+        <ThreeScene />
+      </div>
      <section className="space-section max-h-screen flex flex-col items-center justify-center">
         <motion.div
           ref={introRef}
