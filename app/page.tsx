@@ -53,7 +53,6 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen">
-      <Navigation />
       <StarsBackground starsCount={300} />
       <div>
         <ThreeScene />

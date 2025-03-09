@@ -13,7 +13,7 @@ const navItems = [
   { name: "Sponsors", path: "/sponsors" },
   { name: "Team", path: "/team" },
   { name: "F.A.Q", path: "/faq" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "Contact Us", path: "/contacts" },
 ]
 
 export default function Navigation() {
