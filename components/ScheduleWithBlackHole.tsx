@@ -5,15 +5,15 @@ import BlackHole from './black-hole'
 const ScheduleWithBlackHole = () => {
   return (
     <>
-            <section className="space-section py-20 relative">
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <section className="space-section relative">
+          <div className="container mx-auto px-4 my-16 py-5 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false, amount: 0.05, margin: "100px 0px" }}
                 transition={{ duration: 0.8 }}
-                className="relative h-96 order-2 lg:order-1"
+                className="relative top-[-240px] left-[-100px]  lg:top-0 lg:left-0 h-auto order-2 lg:order-1"
               >
                 {/* Black Hole component */}
                 <BlackHole size={16} />
