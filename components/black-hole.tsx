@@ -28,7 +28,7 @@ export default function BlackHole({ size }: BlackHoleProps) {
     backgroundGlow.style.borderRadius = "50%"
     backgroundGlow.style.background = "radial-gradient(circle, rgba(100, 100, 255, 0.2), rgba(50, 50, 100, 0.1) 40%, transparent 70%)"
     backgroundGlow.style.transform = "translate(-50%, -50%)"
-    backgroundGlow.style.zIndex = "1"
+    backgroundGlow.style.zIndex = "-5"
     containerRef.current.appendChild(backgroundGlow)
 
     // Create accretion disk with better visibility
@@ -44,7 +44,7 @@ export default function BlackHole({ size }: BlackHoleProps) {
     accretionDisk.style.border = "2px solid rgba(180, 130, 255, 0.7)"
     accretionDisk.style.transform = "translate(-50%, -50%) rotate(0deg)"
     accretionDisk.style.animation = "rotate-disk 20s linear infinite"
-    accretionDisk.style.zIndex = "2"
+    accretionDisk.style.zIndex = "-4"
     containerRef.current.appendChild(accretionDisk)
 
     // Add keyframes for the rotation animation
@@ -70,7 +70,7 @@ export default function BlackHole({ size }: BlackHoleProps) {
       lens.style.borderRadius = "50%"
       lens.style.transform = `translate(-50%, -50%) rotate(${i * (360 / lensCount)}deg)`
       lens.style.filter = "blur(5px)"
-      lens.style.zIndex = "3"
+      lens.style.zIndex = "-3"
       containerRef.current.appendChild(lens)
     }
 
@@ -85,7 +85,7 @@ export default function BlackHole({ size }: BlackHoleProps) {
     eventHorizon.style.borderRadius = "50%"
     eventHorizon.style.transform = "translate(-50%, -50%)"
     eventHorizon.style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(100, 100, 255, 0.3)"
-    eventHorizon.style.zIndex = "4"
+    eventHorizon.style.zIndex = "-2"
     containerRef.current.appendChild(eventHorizon)
 
     // Add a subtle blue ring around the event horizon for better visibility
@@ -99,7 +99,7 @@ export default function BlackHole({ size }: BlackHoleProps) {
     blueRing.style.border = "2px solid rgba(100, 100, 255, 0.6)"
     blueRing.style.transform = "translate(-50%, -50%)"
     blueRing.style.boxShadow = "0 0 10px rgba(100, 100, 255, 0.4)"
-    blueRing.style.zIndex = "5"
+    blueRing.style.zIndex = "-1"
     containerRef.current.appendChild(blueRing)
 
     // Create light particles being sucked in
