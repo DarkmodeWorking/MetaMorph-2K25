@@ -76,7 +76,7 @@ export default function PrizeDisplay() {
   }, [orbitControls]);
 
   return (
-    <div className="relative w-full min-h-[700px] perspective-1000 overflow-hidden" ref={containerRef}>
+    <div className="relative w-full min-h-[700px] perspective-1000 overflow-hidden md:overflow-visible" ref={containerRef}>
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
 
       {/* Cosmic glow */}
