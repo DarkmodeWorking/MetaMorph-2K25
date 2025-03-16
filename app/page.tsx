@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import StarsBackground from "@/components/stars-background";
 import Hero from "@/components/Hero";
 import TechDomains from "@/components/TechDomains";
-import Prizes from "@/components/Prizes";
+import PrizeDisplay from "@/components/Prizes";
 import ScheduleWithBlackHole from "@/components/ScheduleWithBlackHole";
 import CallToAction from "@/components/CallToAction";
 import Wormhole from "@/components/Wormhole";
@@ -27,7 +27,7 @@ export default function Home() {
         {/* Challenge  Section */}
         <TechDomains/>
         {/* Prizes Section */}
-        <Prizes/>
+        <PrizeDisplay/>
         {/* Sponsors Section */}
         {/* <Sponsors/> */}
         {/* Wormhole Section */}
