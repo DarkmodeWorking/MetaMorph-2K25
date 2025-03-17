@@ -150,35 +150,46 @@ export default function ThreeScene() {
     // Handle window resize
     const handleResize = () => {
       if (cameraRef.current && rendererRef.current) {
-        cameraRef.current.aspect = window.innerWidth / window.innerHeight;
+        const aspect = window.innerWidth / window.innerHeight;
+        cameraRef.current.aspect = aspect;
         cameraRef.current.updateProjectionMatrix();
         rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+  
+        // Adjust camera position for better centering on mobile devices
+        if (window.innerWidth <= 768) {  // Mobile view
+          cameraRef.current.position.z = 9;  // Reduce the camera Z position for closer view
+        } else {
+          cameraRef.current.position.z = 5;  // Default position for larger screens
+        }
       }
     };
-
+  
+    // Initial call
+    handleResize();
+  
     window.addEventListener("resize", handleResize);
-
+  
     return () => {
       window.removeEventListener("resize", handleResize);
-
+  
       if (rendererRef.current && containerRef.current) {
         containerRef.current.removeChild(rendererRef.current.domElement);
       }
-
+  
       if (sceneRef.current) {
         if (starsRef.current) {
           sceneRef.current.remove(starsRef.current);
           starsRef.current.geometry.dispose();
           (starsRef.current.material as THREE.Material).dispose();
         }
-
+  
         if (galaxyRef.current) {
           sceneRef.current.remove(galaxyRef.current);
           galaxyRef.current.geometry.dispose();
           (galaxyRef.current.material as THREE.Material).dispose();
         }
       }
-
+  
       if (rendererRef.current) {
         rendererRef.current.dispose();
       }
@@ -186,9 +197,9 @@ export default function ThreeScene() {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="absolute top-0 left-0 w-full h-screen pointer-events-none z-0"
-    />
-  );
+  <div
+    ref={containerRef}
+    className="absolute top-0 left-0 w-full h-screen pointer-events-none z-0 flex justify-center items-center"
+  />
+);
 }
