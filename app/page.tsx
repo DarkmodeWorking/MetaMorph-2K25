@@ -11,6 +11,8 @@ import ScheduleWithBlackHole from "@/components/ScheduleWithBlackHole";
 import CallToAction from "@/components/CallToAction";
 import Wormhole from "@/components/Wormhole";
 import { Venue } from "@/components/Venue";
+import { Sponsors } from "@/components/sponsors";
+
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement>(null);
@@ -31,7 +33,7 @@ export default function Home() {
         <PrizeDisplay/>
         <Venue/>
         {/* Sponsors Section */}
-        {/* <Sponsors/> */}
+        <Sponsors/>
         {/* Wormhole Section */}
           <Wormhole/>
         {/* Schedule Section with Black Hole */}
