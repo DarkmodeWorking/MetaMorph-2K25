@@ -36,7 +36,7 @@ export default function Home() {
         {/* Sponsors Section */}
         <Sponsors/>
         {/* Wormhole Section */}
-          <Wormhole/>
+          {/* <Wormhole/> */}
         {/* Schedule Section with Black Hole */}
           <ScheduleWithBlackHole/>
           <Faqs/>
