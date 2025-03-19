@@ -12,6 +12,7 @@ import CallToAction from "@/components/CallToAction";
 import Wormhole from "@/components/Wormhole";
 import { Venue } from "@/components/Venue";
 import { Sponsors } from "@/components/sponsors";
+import Faqs from "@/components/Faqs";
 
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
           <Wormhole/>
         {/* Schedule Section with Black Hole */}
           <ScheduleWithBlackHole/>
+          <Faqs/>
         {/* Call to Action Section */}
         <CallToAction/>
       </div>
