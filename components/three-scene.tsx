@@ -84,8 +84,8 @@ export default function ThreeScene() {
       transparent: true,
     });
     galaxyMaterial.depthWrite = false;
-    galaxyMaterial.blending = THREE.AdditiveBlending;
-    galaxyMaterial.vertexColors = true;
+    // galaxyMaterial.blending = THREE.AdditiveBlending;
+    galaxyMaterial.vertexColors = false;
     galaxyMaterial.alphaMap = getRandomAlphaMap();
 
      const galaxyVertices = [];
