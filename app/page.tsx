@@ -13,7 +13,7 @@ import Wormhole from "@/components/Wormhole";
 import { Venue } from "@/components/Venue";
 import { Sponsors } from "@/components/sponsors";
 import Faqs from "@/components/Faqs";
-
+import CosmicContact from "@/components/Contact";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement>(null);
@@ -42,6 +42,8 @@ export default function Home() {
           <Faqs/>
         {/* Call to Action Section */}
         <CallToAction/>
+        {/* Contact Section */}
+        <CosmicContact/>
       </div>
     </main>
   );
