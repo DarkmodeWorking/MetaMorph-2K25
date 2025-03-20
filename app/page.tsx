@@ -23,7 +23,7 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   return (
     <main className="relative min-h-screen">
-      <StarsBackground starsCount={300} />
+      <StarsBackground starsCount={150} />
       {/* Intro Section */}
       <Hero/>
 
