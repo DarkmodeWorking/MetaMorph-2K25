@@ -90,13 +90,13 @@ export default function CosmicFaq() {
     {
       question: "What are the prize categories?",
       answer:
-        "MetaMorph features stellar rewards with $30K for the First Prize, $20K for the Second Prize, and $15K for the Third Prize. We also have special category prizes for Best AI Implementation, Most Innovative Blockchain Solution, and Best UI/UX Design.",
+     " MetaMorph offers stellar rewards, with ₹30K for the First Prize and ₹20K for the Second Prize in each challenge domain! Plus, there are special category prizes like Best Beginners Team. Track-specific prizes will also be available, determined by our track partners. More challenges, more ways to win!",
       icon: <Sparkles className="w-5 h-5 text-pink-400" />,
     },
     {
       question: "What technologies can we use?",
       answer:
-        "You're free to explore any technology in the universe! We have challenge domains including AI & ML, Web Technologies, Blockchain Revolution, and more. We encourage innovative use of emerging technologies, but you can use any programming language, framework, or platform of your choice.",
+        "You're free to explore any technology in the universe! Our challenge domains include AI & ML, Cyber Security, Blockchain Revolution, and more. We encourage innovative use of emerging technologies, but the choice is entirely yours. You can use any programming language, framework, or platform you prefer. Feel free to mix and match multiple technologies—creativity knows no limits.",
       icon: <Zap className="w-5 h-5 text-cyan-400" />,
     },
     {
@@ -114,7 +114,7 @@ export default function CosmicFaq() {
     {
       question: "What should I bring to the hackathon?",
       answer:
-        "Pack your spacecraft with a laptop, charger, any specialized hardware for your project, and your cosmic creativity! We'll provide the fuel (food and drinks), internet connection, power outlets, and a comfortable space station environment for all participants.",
+"Pack your spacecraft with a laptop, charger, any specialized hardware for your project, and your cosmic creativity! We'll provide the fuel—food, drinks, internet, power outlets, and a comfortable space station environment for all participants. If you have any special medical needs, don’t forget to bring your essential medicines. Also, carrying a water bottle is always a good idea to stay hydrated on this intergalactic journey!" ,
       icon: <Rocket className="w-5 h-5 text-orange-400" />,
     },
   ]
