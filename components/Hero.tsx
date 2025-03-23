@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <>
       {/* 3D Scene */}
-      <div className="fixed inset-0 -z-10">
+      <div className="inset-0 -z-10">
         <ThreeScene />
       </div>
 
