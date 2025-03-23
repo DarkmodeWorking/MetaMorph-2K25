@@ -87,12 +87,12 @@ export default function CosmicFaq() {
         "Registration is simple! Navigate to our Registration Portal through the 'Register Now' button on the homepage. You can register as an individual or as a team of up to 4 members. Make sure to complete your cosmic profile with all required information before the registration deadline.",
       icon: <Star className="w-5 h-5 text-purple-400" />,
     },
-    {
-      question: "What are the prize categories?",
-      answer:
-     " MetaMorph offers stellar rewards, with ₹30K for the First Prize and ₹20K for the Second Prize in each challenge domain! Plus, there are special category prizes like Best Beginners Team. Track-specific prizes will also be available, determined by our track partners. More challenges, more ways to win!",
-      icon: <Sparkles className="w-5 h-5 text-pink-400" />,
-    },
+    // {
+    //   question: "What are the prize categories?",
+    //   answer:
+    //  " MetaMorph offers stellar rewards, with ₹30K for the First Prize and ₹20K for the Second Prize in each challenge domain! Plus, there are special category prizes like Best Beginners Team. Track-specific prizes will also be available, determined by our track partners. More challenges, more ways to win!",
+    //   icon: <Sparkles className="w-5 h-5 text-pink-400" />,
+    // },
     {
       question: "What technologies can we use?",
       answer:
