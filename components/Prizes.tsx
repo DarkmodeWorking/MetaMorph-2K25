@@ -34,7 +34,7 @@ export default function PrizeDisplay() {
   // Define prizes (order in the array does not matter as we use prize.position)
   const prizes: Prize[] = [
     { 
-      amount: "30K", 
+      amount: "Cooming Soon", 
       position: 1, 
       color: "#FFD700", 
       glow: "#FFEA80", 
@@ -42,7 +42,7 @@ export default function PrizeDisplay() {
       shape: "round"
     },
     { 
-      amount: "15K", 
+      amount: "Cooming Soon", 
       position: 3, 
       color: "#CD7F32", // Bronze for third
       glow: "#E0A96D",
@@ -52,7 +52,7 @@ export default function PrizeDisplay() {
    
     
     { 
-      amount: "20K", 
+      amount: "Cooming Soon", 
       position: 2, 
       color: "#C0C0C0", // Silver for second
       glow: "#D4D4D4",
@@ -204,10 +204,10 @@ export default function PrizeDisplay() {
                       {/* Prize amount */}
                       <div className="relative">
                         <span className="absolute -inset-1 blur-sm opacity-70" style={{ color: prize.glow }}>
-                          ${prize.amount}
+                          {prize.amount}
                         </span>
-                        <span className={`relative ${isFirstPrize ? 'text-6xl' : 'text-5xl'} font-bold text-white`}>
-                          ${prize.amount}
+                        <span className={`relative ${isFirstPrize ? 'text-2xl' : 'text-xl'} font-bold text-white`}>
+                          {prize.amount}
                         </span>
                       </div>
 

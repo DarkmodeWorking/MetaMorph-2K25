@@ -224,7 +224,7 @@ export default function CosmicAbout() {
                   <div>
                     <div className="flex items-center gap-2 text-sm text-blue-200/80 mb-2">
                       <Calendar className="w-4 h-4" />
-                      <span>April 15-17, 2025</span>
+                      <span>September 6-7, 2025</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-blue-200/80">
                       <MapPin className="w-4 h-4" />
