@@ -1,14 +1,23 @@
 import { motion } from 'framer-motion';
 import React, { memo } from 'react';
 import PlanetModel from './planet-model';
+import { MorphingText } from "@/components/ui/liquid-text";
+
+const texts = [
+  "Comming Soon",
+  "Stay Tuned",
+  "For More",
+  "Updates",
+];
 
 const TechDomains = () => {
   return (
-    <section className="space-section py-20">
+    <section className="space-section pt-20">
       <div className="container mx-auto px-4">
         <AnimatedHeader />
         <br />
-        <PlanetGrid />
+        {/* <PlanetGrid /> */}
+        <MorphingText texts={texts} />
       </div>
     </section>
   );

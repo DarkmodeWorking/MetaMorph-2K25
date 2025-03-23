@@ -12,22 +12,35 @@ const demoLogos = [
   { id: 6, name: "MongoDB", src: "brandlogos/mongodb.svg" },
 ];
 
+import { MorphingText } from "@/components/ui/liquid-text";
+
+const texts = [
+  "Comming Soon",
+  "Stay Tuned",
+  "For More",
+  "Updates",
+];
 
 function Sponsors() {
   return (
     <Card className='bg-transparent border-0'>
       <CardContent className="pt-6">
         <div className="text-center space-y-4 mb-12">
+          <p className="text-4xl font-bold tracking-widest ">
+            SPONSORS
+          </p>
           <p className="text-sm font-medium tracking-widest text-muted-foreground">
             TRUSTED BY TEAMS FROM AROUND THE WORLD
           </p>
-          <h2 className="text-[3.5rem] font-bold tracking-tight leading-none">
+          {/* <h2 className="text-[3.5rem] font-bold tracking-tight leading-none">
             The best are already here
-          </h2>
+          </h2> */}
+            <MorphingText texts={texts} />
         </div>
-        <LogoCarousel logos={demoLogos} />
+        {/* <LogoCarousel logos={demoLogos} /> */}
       </CardContent>
     </Card>
+  
   );
 }
 
