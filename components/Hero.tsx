@@ -1,24 +1,25 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown, Code, X } from 'lucide-react';
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ThreeScene from './three-scene';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ChevronDown, Code, X } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import ThreeScene from './three-scene';
+import Image from "next/image";
 
 // Register GSAP plugins
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 const Hero = () => {
   const [showModal, setShowModal] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const introRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  
+
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
@@ -27,12 +28,12 @@ const Hero = () => {
 
     if (introRef.current) {
       // Animate only non-Framer-Motion elements
-      gsap.from(introRef.current.querySelectorAll('.gsap-animate'), {
+      gsap.from(introRef.current.querySelectorAll(".gsap-animate"), {
         y: 50,
         opacity: 0,
         stagger: 0.2,
         duration: 1,
-        ease: 'power3.out',
+        ease: "power3.out",
       });
     }
 
@@ -42,32 +43,32 @@ const Hero = () => {
       lastScrollTop = st <= 0 ? 0 : st;
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setLoading(true);
 
     try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
 
-      if (!response.ok) throw new Error('Registration failed');
-      
+      if (!response.ok) throw new Error("Registration failed");
+
       setSuccess(true);
       setTimeout(() => {
         setShowModal(false);
         setSuccess(false);
-        setEmail('');
+        setEmail("");
       }, 2000);
     } catch (err) {
-      setError('Failed to register. Please try again.');
+      setError("Failed to register. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -76,30 +77,32 @@ const Hero = () => {
   return (
     <>
       {/* 3D Scene */}
-      <div className="inset-0 -z-10">
+      {/* <div className="inset-0 -z-10">
         <ThreeScene />
-      </div>
+      </div> */}
 
       {/* Email Registration Modal */}
       {showModal && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
           onClick={() => setShowModal(false)}
         >
-          <div 
+          <div
             className="bg-background p-8 rounded-xl max-w-md w-full mx-4 relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <button 
+            <button
               onClick={() => setShowModal(false)}
               className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
             >
               <X size={24} />
             </button>
-            
+
             {!success ? (
               <>
-                <h3 className="text-2xl font-bold mb-6">Pre-Register for MetaMorph</h3>
+                <h3 className="text-2xl font-bold mb-6">
+                  Pre-Register for MetaMorph
+                </h3>
                 <form onSubmit={handleSubmit}>
                   <input
                     type="email"
@@ -115,7 +118,7 @@ const Hero = () => {
                     disabled={loading}
                     className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
                   >
-                    {loading ? 'Sending...' : 'Confirm Registration'}
+                    {loading ? "Sending..." : "Confirm Registration"}
                   </button>
                 </form>
               </>
@@ -129,7 +132,7 @@ const Hero = () => {
                 </p>
               </div>
             )}
-            
+
             {error && (
               <div className="mt-4 text-red-500 text-center">{error}</div>
             )}
@@ -150,8 +153,16 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            MetaMorph
+            <Image
+            src="/images/mm-wordmark-purple.png"
+            alt="MetaMorph"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto max-w-[350px] mx-auto mb-6"
+          />
           </motion.h1>
+          
           
           <motion.div
             className="flex items-center gap-3 justify-center text-xl md:text-2xl font-bold mb-6 text-muted-foreground"
@@ -179,7 +190,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <button 
+            <button
               onClick={() => setShowModal(true)}
               className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-medium hover:bg-primary/90 transition-colors"
             >
@@ -188,7 +199,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="absolute bottom-8 flex flex-col items-center text-muted-foreground"
           style={{ opacity }}
           initial={{ opacity: 0 }}

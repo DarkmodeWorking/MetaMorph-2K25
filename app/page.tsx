@@ -14,6 +14,7 @@ import { Venue } from "@/components/Venue";
 import { Sponsors } from "@/components/sponsors";
 import Faqs from "@/components/Faqs";
 import CosmicContact from "@/components/Contact";
+import Image from "next/image";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement>(null);
@@ -26,7 +27,6 @@ export default function Home() {
       <StarsBackground starsCount={150} />
       {/* Intro Section */}
       <Hero/>
-
       <div ref={sectionsRef}>
         {/* Challenge  Section */}
         <TechDomains/>

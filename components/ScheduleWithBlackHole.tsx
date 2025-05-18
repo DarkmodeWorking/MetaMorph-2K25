@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-import BlackHole from './black-hole'
+// import BlackHole from './black-hole'
+import Image from 'next/image'
 
 const ScheduleWithBlackHole = () => {
   return (
@@ -16,7 +17,15 @@ const ScheduleWithBlackHole = () => {
                 className="relative top-[-240px] left-[-100px]  lg:top-0 lg:left-0 h-auto order-2 lg:order-1"
               >
                 {/* Black Hole component */}
-                <BlackHole size={16} />
+                {/* <BlackHole size={16} /> */}
+                <Image
+                            src="/images/mm-wordmark-purple.png"
+                            alt="MetaMorph"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-full h-auto max-w-[400px] mx-auto mb-6"
+                          />
               </motion.div>
 
               <motion.div
