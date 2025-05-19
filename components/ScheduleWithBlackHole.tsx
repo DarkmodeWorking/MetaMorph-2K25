@@ -8,13 +8,13 @@ const ScheduleWithBlackHole = () => {
     <>
             <section className="space-section relative">
           <div className="container mx-auto px-4 my-16 py-5 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center justify-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false, amount: 0.05, margin: "100px 0px" }}
                 transition={{ duration: 0.8 }}
-                className="relative top-[-240px] left-[-100px]  lg:top-0 lg:left-0 h-auto order-2 lg:order-1"
+                className=""
               >
                 {/* Black Hole component */}
                 {/* <BlackHole size={16} /> */}
@@ -24,7 +24,7 @@ const ScheduleWithBlackHole = () => {
                             width={0}
                             height={0}
                             sizes="100vw"
-                            className="w-full h-auto max-w-[400px] mx-auto mb-6"
+                            className="w-full h-auto max-w-[400px] mx-auto px-5 mb-6"
                           />
               </motion.div>
 
@@ -33,7 +33,7 @@ const ScheduleWithBlackHole = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.05, margin: "100px 0px" }}
                 transition={{ duration: 0.8 }}
-                className="order-1 lg:order-2"
+                className="order-1 lg:order-2  pl-5 "
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   Event Horizon
@@ -48,7 +48,7 @@ const ScheduleWithBlackHole = () => {
                   together the brightest minds to form a singularity of
                   innovation in the tech universe.
                 </p>
-                <button className="px-6 py-3 bg-white text-black rounded-md text-lg font-medium hover:bg-white/90 transition-colors">
+                <button className="px-6 py-3  bg-white text-black rounded-md text-lg font-medium hover:bg-white/90 transition-colors">
                   View Full Schedule
                 </button>
               </motion.div>
