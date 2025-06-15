@@ -1,17 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, // Recommended for detecting potential issues
-  swcMinify: true,        // Use SWC for faster builds
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    unoptimized: true,    // Set to true if not using next/image optimization
+    unoptimized: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Prevent ESLint errors from blocking builds
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,  // Prevent TS errors from blocking builds
+    ignoreBuildErrors: true,
   },
-  productionBrowserSourceMaps: false, // Saves memory during build
-}
+  productionBrowserSourceMaps: false, // Helps prevent memory issues
+};
 
-export default nextConfig
+export default nextConfig;
