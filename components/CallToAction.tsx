@@ -14,16 +14,14 @@ const CallToAction = () => {
               className="text-center max-w-3xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-                Ready to Transform?
+                Wish to Join Us?
               </h2>
               <p className="text-xl text-muted-foreground mb-12">
-                Join the MetaMorph Hackathon and be part of the next
-                technological revolution. Register now to secure your spot in
-                this cyberpunk coding adventure.
+                Join the MetaMorph Hackathon as a Community partner or sponsur us and be part of the next technological revolution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-medium hover:bg-primary/90 transition-colors">
-                  Register Now
+                  Community Partner
                 </button>
                 <button className="px-8 py-3 bg-secondary text-secondary-foreground rounded-full text-lg font-medium hover:bg-secondary/90 transition-colors">
                   Sponsor Us

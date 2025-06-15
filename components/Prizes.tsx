@@ -34,29 +34,31 @@ export default function PrizeDisplay() {
   // Define prizes (order in the array does not matter as we use prize.position)
   const prizes: Prize[] = [
     { 
-      amount: "Cooming Soon", 
+      amount: "Coming Soon", 
       position: 1, 
       color: "#FFD700", 
       glow: "#FFEA80", 
-      description: "Grand Champion", 
+      // description: "Grand Champion", 
+      description: "Supernova", 
       shape: "round"
     },
     { 
-      amount: "Cooming Soon", 
+      amount: "Coming Soon", 
       position: 3, 
       color: "#CD7F32", // Bronze for third
       glow: "#E0A96D",
-      description: "Valiant Warrior", 
+      description: "Neutron Star", 
       shape: "round"
     },
    
     
     { 
-      amount: "Cooming Soon", 
+      amount: "Coming Soon", 
       position: 2, 
       color: "#C0C0C0", // Silver for second
       glow: "#D4D4D4",
-      description: "Noble Challenger", 
+      // description: "Noble Challenger", 
+      description: "Giant Star", 
       shape: "round"
     },
    

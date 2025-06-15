@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, MessageSquare, Github, Twitter, Linkedin, ExternalLink } from "lucide-react"
+import { Mail, Phone, MessageSquare, Github, Twitter, Linkedin, ExternalLink, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
@@ -96,7 +96,8 @@ export default function CosmicContact() {
   ]
 
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, href: "https://github.com/metamorph-hackathon" },
+    // { icon: <Github className="w-5 h-5" />, href: "https://github.com/metamorph-hackathon" },
+    { icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com/metamorph_hack" },
     { icon: <Twitter className="w-5 h-5" />, href: "https://twitter.com/metamorph_hack" },
     { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/company/metamorph-hackathon" },
   ]

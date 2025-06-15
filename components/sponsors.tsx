@@ -15,7 +15,7 @@ const demoLogos = [
 import { MorphingText } from "@/components/ui/liquid-text";
 
 const texts = [
-  "Comming Soon",
+  "Coming Soon",
   "Stay Tuned",
   "For More",
   "Updates",

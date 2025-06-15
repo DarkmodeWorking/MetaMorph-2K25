@@ -5,6 +5,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import ThreeScene from './three-scene';
 import Image from "next/image";
+import { GradientButton } from "./ui/gradient-button";
+import { SplitText } from "./split-text";
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
@@ -175,27 +177,52 @@ const Hero = () => {
             <Code className="w-6 h-6 text-blue-400" />
           </motion.div>
 
-          <motion.p
+          <motion.div
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Transform your ideas into reality in this cyberpunk-themed coding
-            extravaganza
-          </motion.p>
+            <SplitText
+        text="Showcase your ideas in this interstellar-themed coding extravaganza."
+        className="text-xl md:text-2xl lg:text-3xl font-bold text-center max-w-2xl"
+        delay={50}
+        animationFrom={{ opacity: 0, transform: 'translate3d(0, 30px, 0)' }} 
+        animationTo={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
+        easing="easeOutCubic"
+        threshold={0.3} 
+        rootMargin="-100px"
+        // onLetterAnimationComplete={handleAnimationComplete}
+      />
+            
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <button
+            <div className="text-center">
+              <GradientButton className="mx-3" variant="variant">REGISTER WITH DEVFOLIO <img src="devfolio.svg" className="ml-2 w-5 h-5" alt="" /> </GradientButton>
+             <a
+  href="https://discord.gg/86gecbgEzD"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mx-3 inline-block"
+>
+  <GradientButton variant="variant">
+    JOIN DISCORD
+    <img src="discord.svg" className="ml-2 w-5 h-5" alt="" />
+  </GradientButton>
+</a>
+
+            </div>
+            {/* <button
               onClick={() => setShowModal(true)}
               className="px-8 py-3 bg-primary text-primary-foreground rounded-full text-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Pre-Register
-            </button>
+            </button> */}
           </motion.div>
         </motion.div>
 
