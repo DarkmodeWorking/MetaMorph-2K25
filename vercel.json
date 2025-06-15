@@ -1,7 +1,8 @@
 {
   "build": {
     "env": {
-      "NODE_VERSION": "20"
+      "NODE_VERSION": "20",
+      "JEST_WORKER_MAX_WORKERS": "1"
     }
   }
 }
